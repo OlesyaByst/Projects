@@ -22,21 +22,21 @@ public class Fraction {
         return numerator + "/" + denominator;
     }
 
-    public Fraction sum(Fraction other) { //other вторая дробь
+    public Fraction sum(Fraction other) {
         int newNumerator = this.numerator * other.denominator + this.denominator * other.numerator;
-        int newDenominator = this.denominator * other.denominator;//перемножение знаменателей
+        int newDenominator = this.denominator * other.denominator;
         return new Fraction(newNumerator, newDenominator);
     }
 
     public Fraction minus(Fraction other) {
         int newNumerator = (this.numerator * other.denominator) - this.denominator * other.numerator;
-        int newDenominator = this.denominator * other.denominator;//перемножение знаменателей
+        int newDenominator = this.denominator * other.denominator;
         return new Fraction(newNumerator, newDenominator);
     }
 
     public Fraction plusWhole(int whole) {
         Fraction wholeNumber = new Fraction(whole, 1);
-        return this.sum(wholeNumber); //this вернуть текущий объект класса plus
+        return this.sum(wholeNumber);
     }
 
     public Fraction minusWhole(int whole) {
