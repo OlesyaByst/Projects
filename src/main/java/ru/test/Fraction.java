@@ -1,13 +1,37 @@
 package ru.test;
 
-public class Fraction {
+import java.util.List;
+import java.util.ArrayList;
+
+public class Fraction  extends Number{
     private final int numerator;
     private final int denominator;
 
+    @Override
+    public int intValue() {
+
+        return (int) ((double) numerator/ denominator);
+    }
+
+    @Override
+    public long longValue() {
+        return (long) ((double) numerator/ denominator);
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) ((double) numerator/ denominator);
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) numerator/ denominator;
+    }
+
     public Fraction(int numerator, int denominator) {
         if (denominator <= 0) throw new IllegalArgumentException();
-        this.numerator = numerator;
-        this.denominator = denominator;
+   this.numerator = numerator;
+   this.denominator = denominator;
     }
 
     public int getNumerator() {
@@ -17,9 +41,9 @@ public class Fraction {
     public int getDenominator() {
         return denominator;
     }
-
+@Override
     public String toString() {
-        return numerator + "/" + denominator;
+        return this.numerator + "/" + this.denominator;
     }
 
     public Fraction sum(Fraction other) {
@@ -42,5 +66,16 @@ public class Fraction {
     public Fraction minusWhole(int whole) {
         Fraction wholeNumber = new Fraction(whole, 1);
         return this.minus(wholeNumber);
+    }
+
+    //Задание ООП 2.6 Сложение
+    public static double sumAll(List<Number> values) {
+        double sumAll = 0;
+        Number num = 0;
+        for (int i = 0; i < values.size(); i++) {
+            num = values.get(i);
+            sumAll += num.doubleValue();
+        }
+        return sumAll;
     }
 }
