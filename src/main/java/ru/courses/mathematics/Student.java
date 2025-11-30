@@ -1,4 +1,4 @@
-package ru.test;
+package ru.courses.mathematics;
 import java.util.ArrayList;
 import java.util.List;
 

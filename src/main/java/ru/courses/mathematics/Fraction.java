@@ -1,7 +1,6 @@
-package ru.test;
+package ru.courses.mathematics;
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class Fraction  extends Number{
     private final int numerator;
