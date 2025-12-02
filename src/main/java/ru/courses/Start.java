@@ -6,7 +6,7 @@ import ru.courses.mathematics.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Start {
     public static void printObject(Measurable measurableObject) {
         System.out.println(measurableObject.getLength());
     }
@@ -148,5 +148,10 @@ public class Main {
         numbers3.add(num5);
         numbers3.add(f8);
         System.out.println("Третий результат сложения = "+Fraction.sumAll(numbers3));
+
+        System.out.println("---------");
+        System.out.println("Практика ООП. Пакеты #4. Простые имена");
+        java.awt.Point awtPoint = new java.awt.Point(50, 60);
+        System.out.println("Точка {" + awtPoint.x+";"+awtPoint.y+"}");
     }
 }
