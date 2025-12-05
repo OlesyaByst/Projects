@@ -1,5 +1,7 @@
 package ru.courses.geometry;
 
+import java.util.Objects;
+
 public class Dot {
     public int x;
     public int y;
@@ -19,5 +21,14 @@ public class Dot {
         Dot dot = (Dot) o;
         return this.x == dot.x && this.y == dot.y;
 
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
+    public Dot clone() {
+        return new Dot(x, y);
     }
 }

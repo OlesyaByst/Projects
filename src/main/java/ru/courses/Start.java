@@ -1,4 +1,5 @@
 package ru.courses;
+
 import ru.courses.geometry.*;
 import ru.courses.mathematics.Fraction;
 import ru.courses.mathematics.Student;
@@ -22,10 +23,6 @@ public class Start {
         System.out.println("Dot1" + dot1);
         System.out.println("Dot2" + dot2);
         System.out.println("Dot3" + dot3);
-
-        System.out.println(dot1.equals(dot2));
-        System.out.println(dot1.equals(dot3));
-        System.out.println(dot2.equals(dot3));
 
         //Задача 2
         Line line1 = new Line(dot1, dot3);
@@ -120,38 +117,46 @@ public class Start {
 
         System.out.println("---------");
         System.out.println("Задание ООП. Полиморфизм #6. Сложение");
-        Number num1=2.3;
-        Number num2=3.6;
-        Number num3=num1.intValue(); //2
-        Number num4=num2.intValue(); //3
-        Number num5=1;
+        Number num1 = 2.3;
+        Number num2 = 3.6;
+        Number num3 = num1.intValue(); //2
+        Number num4 = num2.intValue(); //3
+        Number num5 = 1;
 
         Fraction f5 = new Fraction(num2.intValue(), 5); // 3/5
         Fraction f6 = new Fraction(49, 12);
-        Fraction f7 = new Fraction(num4.intValue(),num3.intValue()); // 3/2
-        Fraction f8 = new Fraction(num5.intValue(),num4.intValue()); // 1/3
+        Fraction f7 = new Fraction(num4.intValue(), num3.intValue()); // 3/2
+        Fraction f8 = new Fraction(num5.intValue(), num4.intValue()); // 1/3
 
         List<Number> numbers1 = new ArrayList<>();
         numbers1.add(num1);
         numbers1.add(f5);
         numbers1.add(num3);
-        System.out.println("Первый результат сложения = "+Fraction.sumAll(numbers1));
+        System.out.println("Первый результат сложения = " + Fraction.sumAll(numbers1));
 
         List<Number> numbers2 = new ArrayList<>();
         numbers2.add(f7);
         numbers2.add(num4);
         numbers2.add(num2);
         numbers2.add(f6);
-        System.out.println("Второй результат сложения = "+Fraction.sumAll(numbers2));
+        System.out.println("Второй результат сложения = " + Fraction.sumAll(numbers2));
 
         List<Number> numbers3 = new ArrayList<>();
         numbers3.add(num5);
         numbers3.add(f8);
-        System.out.println("Третий результат сложения = "+Fraction.sumAll(numbers3));
+        System.out.println("Третий результат сложения = " + Fraction.sumAll(numbers3));
 
         System.out.println("---------");
         System.out.println("Практика ООП. Пакеты #4. Простые имена");
         java.awt.Point awtPoint = new java.awt.Point(50, 60);
-        System.out.println("Точка {" + awtPoint.x+";"+awtPoint.y+"}");
+        System.out.println("Точка {" + awtPoint.x + ";" + awtPoint.y + "}");
+
+        System.out.println("---------");
+        System.out.println("ООП. Класс Object #2. Сравнение точек");
+        System.out.println("Одинаковые координаты: " + dot1.equals(dot2));
+        System.out.println("Разные координаты: " + dot3.equals(dot2));
+        Dot dot10 = dot5.clone(); // координаты  dot5 15,19
+        System.out.println("Клон точка " + dot10);
+        System.out.println("Сравнение c новой точкой: " + dot5.equals(dot10));
     }
 }
