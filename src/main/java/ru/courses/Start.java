@@ -159,6 +159,7 @@ public class Start {
         System.out.println("Клон точка " + dot10);
         System.out.println("Сравнение c новой точкой: " + dot5.equals(dot10));
 
+
         System.out.println("---------");
         System.out.println("Практика ООП. Класс Object #3. Сравнение линий");
         Line line4 = new Line(dot6, dot7);
@@ -168,6 +169,7 @@ public class Start {
         Line lineClone = line1.clone();
         System.out.println("Копирование линии: " + lineClone);
         System.out.println("Сравнение оригинала и копированной линии: " + line1.equals(lineClone));
+
 
         System.out.println("---------");
         System.out.println("Практика ООП. Класс Object #4. Сравнение ломаных линий");
