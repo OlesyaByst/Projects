@@ -30,7 +30,7 @@ public class Dot implements Cloneable {
     }
 
     @Override
-    public Dot clone() throws  CloneNotSupportedException {
+    public Dot clone() throws CloneNotSupportedException {
         return (Dot) super.clone();
     }
 }
