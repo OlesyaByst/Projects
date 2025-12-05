@@ -2,7 +2,7 @@ package ru.courses.geometry;
 
 import java.util.Objects;
 
-public class Line implements Measurable {
+public class Line implements Cloneable {
     public Dot startDot;
     public Dot endDot;
 
@@ -35,7 +35,8 @@ public class Line implements Measurable {
     }
 
     @Override
-    public Line clone() { //глубокое копирование
+    public Line clone() throws CloneNotSupportedException {
+        Line line = (Line) super.clone(); //глубокое копирование
         Line lineClone = new Line(startDot, endDot);
         lineClone.startDot = this.startDot.clone();
         lineClone.endDot = this.endDot.clone();

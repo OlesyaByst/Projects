@@ -54,8 +54,4 @@ public class PolyLine implements Measurable {
     public int hashCode() {
         return Objects.hashCode(dots);
     }
-
-    public PolyLine clone() {
-        return new PolyLine(dots);
-    }
 }

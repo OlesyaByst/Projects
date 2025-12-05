@@ -12,7 +12,7 @@ public class Start {
         System.out.println(measurableObject.getLength());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Dot dot1 = new Dot(1, 3);
         Dot dot2 = new Dot(1, 3);
         Dot dot3 = new Dot(5, 8);
@@ -171,7 +171,11 @@ public class Start {
 
         System.out.println("---------");
         System.out.println("Практика ООП. Класс Object #4. Сравнение ломаных линий");
-        PolyLine polyLineClone = polyLine.clone();
+        PolyLine polyLineClone = new PolyLine();
+        polyLineClone.addDots(dot6);
+        polyLineClone.addDots(dot7);
+        polyLineClone.addDots(dot8);
+        polyLineClone.addDots(dot9);
         System.out.println("Одинаковые ломанные линии: " + polyLine.equals(polyLineClone));
         PolyLine polyLine1 = new PolyLine();
         polyLine1.addDots(dot1);

@@ -2,7 +2,7 @@ package ru.courses.geometry;
 
 import java.util.Objects;
 
-public class Dot {
+public class Dot implements Cloneable {
     public int x;
     public int y;
 
@@ -30,7 +30,7 @@ public class Dot {
     }
 
     @Override
-    public Dot clone() {
-        return new Dot(x, y);
+    public Dot clone() throws  CloneNotSupportedException {
+        return (Dot) super.clone();
     }
 }
