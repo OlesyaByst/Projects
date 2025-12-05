@@ -36,6 +36,7 @@ public class Line implements Cloneable {
 
     @Override
     public Line clone() throws CloneNotSupportedException {
+        Line line = (Line) super.clone();
         Line lineClone = new Line(startDot, endDot);
         lineClone.startDot = this.startDot.clone();
         lineClone.endDot = this.endDot.clone();
