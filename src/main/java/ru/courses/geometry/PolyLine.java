@@ -2,6 +2,7 @@ package ru.courses.geometry;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class PolyLine implements Measurable {
     public List<Dot> dots;
@@ -40,5 +41,21 @@ public class PolyLine implements Measurable {
 
     public String toString() {
         return "Линия [" + dots.toString() + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        PolyLine polyLine = (PolyLine) o;
+        return Objects.equals(dots, polyLine.dots);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(dots);
+    }
+
+    public PolyLine clone() {
+        return new PolyLine(dots);
     }
 }

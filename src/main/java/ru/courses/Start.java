@@ -158,5 +158,27 @@ public class Start {
         Dot dot10 = dot5.clone(); // координаты  dot5 15,19
         System.out.println("Клон точка " + dot10);
         System.out.println("Сравнение c новой точкой: " + dot5.equals(dot10));
+
+        System.out.println("---------");
+        System.out.println("Практика ООП. Класс Object #3. Сравнение линий");
+        Line line4 = new Line(dot6, dot7);
+        Line line5 = new Line(dot6, dot7);
+        System.out.println("Одинаковые линии: " + line4.equals(line5));
+        System.out.println("Разные линии: " + line1.equals(line2));
+        Line lineClone = line1.clone();
+        System.out.println("Копирование линии: " + lineClone);
+        System.out.println("Сравнение оригинала и копированной линии: " + line1.equals(lineClone));
+
+        System.out.println("---------");
+        System.out.println("Практика ООП. Класс Object #4. Сравнение ломаных линий");
+        PolyLine polyLineClone = polyLine.clone();
+        System.out.println("Одинаковые ломанные линии: " + polyLine.equals(polyLineClone));
+        PolyLine polyLine1 = new PolyLine();
+        polyLine1.addDots(dot1);
+        polyLine1.addDots(dot7);
+        polyLine1.addDots(dot8);
+        polyLine1.addDots(dot9);
+        System.out.println("Вторая ломанная линия: " + polyLine1);
+        System.out.println("Разные ломанные линии: " + polyLine.equals(polyLine1));
     }
 }

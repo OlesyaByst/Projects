@@ -15,6 +15,7 @@ public class Dot {
         return "{" + x + ";" + y + "}";
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -28,6 +29,7 @@ public class Dot {
         return Objects.hash(x, y);
     }
 
+    @Override
     public Dot clone() {
         return new Dot(x, y);
     }
