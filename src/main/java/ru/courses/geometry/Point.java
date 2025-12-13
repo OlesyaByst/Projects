@@ -2,11 +2,11 @@ package ru.courses.geometry;
 
 import java.util.Objects;
 
-public class Dot implements Cloneable {
+public class Point implements Cloneable {
     public int x;
     public int y;
 
-    public Dot(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -19,7 +19,7 @@ public class Dot implements Cloneable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Dot dot = (Dot) o;
+        Point dot = (Point) o;
         return this.x == dot.x && this.y == dot.y;
 
     }
@@ -30,7 +30,7 @@ public class Dot implements Cloneable {
     }
 
     @Override
-    public Dot clone() throws CloneNotSupportedException {
-        return (Dot) super.clone();
+    public Point clone() throws CloneNotSupportedException {
+        return (Point) super.clone();
     }
 }

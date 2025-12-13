@@ -13,11 +13,11 @@ public class Start {
     }
 
     public static void main(String[] args) throws Exception {
-        Dot dot1 = new Dot(1, 3);
-        Dot dot2 = new Dot(1, 3);
-        Dot dot3 = new Dot(5, 8);
-        Dot dot4 = new Dot(10, 11);
-        Dot dot5 = new Dot(15, 19);
+        Point dot1 = new Point(1, 3);
+        Point dot2 = new Point(1, 3);
+        Point dot3 = new Point(5, 8);
+        Point dot4 = new Point(10, 11);
+        Point dot5 = new Point(15, 19);
 
         System.out.println("Задание 1");
         System.out.println("Dot1" + dot1);
@@ -42,10 +42,10 @@ public class Start {
         System.out.println("Длина всех линий: " + lenghtAllLines);
 
         //Задание 3
-        Dot dot6 = new Dot(1, 5);
-        Dot dot7 = new Dot(2, 8);
-        Dot dot8 = new Dot(5, 3);
-        Dot dot9 = new Dot(8, 9);
+        Point dot6 = new Point(1, 5);
+        Point dot7 = new Point(2, 8);
+        Point dot8 = new Point(5, 3);
+        Point dot9 = new Point(8, 9);
 
         PolyLine polyLine = new PolyLine();
         polyLine.addDots(dot6);
@@ -155,7 +155,7 @@ public class Start {
         System.out.println("ООП. Класс Object #2. Сравнение точек");
         System.out.println("Одинаковые координаты: " + dot1.equals(dot2));
         System.out.println("Разные координаты: " + dot3.equals(dot2));
-        Dot dot10 = dot5.clone(); // координаты  dot5 15,19
+        Point dot10 = dot5.clone(); // координаты  dot5 15,19
         System.out.println("Клон точка " + dot10);
         System.out.println("Сравнение c новой точкой: " + dot5.equals(dot10));
 

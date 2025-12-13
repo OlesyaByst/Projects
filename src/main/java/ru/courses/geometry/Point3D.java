@@ -1,6 +1,6 @@
 package ru.courses.geometry;
 
-public class Point3D extends Dot {
+public class Point3D extends Point {
     int z;
 
     public Point3D(int x, int y, int z) {

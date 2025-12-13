@@ -3,10 +3,10 @@ package ru.courses.geometry;
 import java.util.Objects;
 
 public class Line implements Cloneable {
-    public Dot startDot;
-    public Dot endDot;
+    public Point startDot;
+    public Point endDot;
 
-    public Line(Dot startDot, Dot endDot) {
+    public Line(Point startDot, Point endDot) {
         this.startDot = startDot;
         this.endDot = endDot;
     }

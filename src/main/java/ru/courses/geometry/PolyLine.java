@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Objects;
 
 public class PolyLine implements Measurable {
-    public List<Dot> dots;
+    public List<Point> dots;
 
     public PolyLine() {
         this.dots = new ArrayList<>();
     }
 
-    public PolyLine(List<Dot> dots) {
+    public PolyLine(List<Point> dots) {
         this.dots = dots;
     }
 
-    public void addDots(Dot d) {
+    public void addDots(Point d) {
         this.dots.add(d);
     }
 
